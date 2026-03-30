@@ -12,7 +12,7 @@ export default function Dashboard() {
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (!session) {
-        router.replace('/login')
+        router.replace('/auth')
       } else {
         setLoading(false)
       }
